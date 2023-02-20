@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TR Pays</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <!-- table -->
+  <link rel="stylesheet"
+    href="https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css">
+  <!-- end -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/media.css">
+</head>
+
+<body>
+  <aside class='sidebar sidebar-menu-collapsed'>
+    <a href='#' id='justify-icon'>
+      <div class="menu-icon">
+        <img src="../assets/menu.svg" />
+      </div>
+    </a>
+    <div class="px-2">
+      <div class="profile_img mb-3">
+        <img src="../assets/profile_img.svg" alt="">
+      </div>
+      <h5 class="fw-bold text-center text-capitalize expanded-element">Sarah joe</h5>
+      <ul>
+        <li class='active'>
+          <a class='expandable' href='#' data-bs-toggle="tooltip" data-bs-placement="top" title='Dashboard'>
+            <span class='fa-solid fa-building-columns collapsed-element'></span>
+            <span class='expanded-element font-16'>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' data-bs-toggle="tooltip" data-bs-placement="top" title='Money in & Money out'>
+            <span class='fa-solid fa-money-check collapsed-element'></span>
+            <span class='expanded-element font-16'>Money in & Money out</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' data-bs-toggle="tooltip" data-bs-placement="top" title='Money Trasfer'>
+            <span class='fa-solid fa-arrow-right-arrow-left collapsed-element'></span>
+            <span class='expanded-element font-16'>Money Trasfer</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' data-bs-toggle="tooltip" data-bs-placement="top" title='Profile Verification'>
+            <span class='fa-solid fa-circle-check collapsed-element'></span>
+            <span class='expanded-element font-16'>Profile Verification</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' data-bs-toggle="tooltip" data-bs-placement="top" title="Settings">
+            <span class='fa-solid fa-gear collapsed-element'></span>
+            <span class='expanded-element font-16'>Settings</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' data-bs-toggle="tooltip" data-bs-placement="top" title='Transaction'>
+            <span class='fa-solid fa-calendar-week collapsed-element'></span>
+            <span class='expanded-element font-16'>Transaction</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' data-bs-toggle="tooltip" data-bs-placement="top" title='Broker Service'>
+            <span class='fa-solid fa-laptop collapsed-element'></span>
+            <span class='expanded-element font-16'>Broker Service</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' data-bs-toggle="tooltip" data-bs-placement="top" title='Support'>
+            <span class='fa-solid fa-life-ring collapsed-element'></span>
+            <span class='expanded-element font-16'>Support</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' data-bs-toggle="tooltip" data-bs-placement="top" title='Sign Out'>
+            <span class='fa-solid fa-right-from-bracket collapsed-element'></span>
+            <span class='expanded-element font-16'>Sign Out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- start content page -->
+  <main class="content-page currency">
+    <nav class="ps-0 ps-md-4 position-sticky top-0 d-flex justify-content-between align-items-center">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class='d-flex' href='#'>
+          <div class="logo"><img src="../assets/logo.svg" alt="logo" /></div>
+          <span class='d-flex align-items-center mx-2 logo-text'>
+            <span class="main-color">TR</span>Pays
+          </span>
+        </a>
+        <div class="d-flex align-items-center">
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-globe me-1 me-md-3"></i>
+              <span> English </span>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Arabic</a></li>
+            </ul>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="profile-img ms-3 me-2 dis-none">
+              <img src="../assets/profile.svg" alt="profile" />
+            </div>
+            <span class="me-3 font-16 dis-none">Sarah Joe</span>
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-sign">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="py-3 py-md-5 container">
+      <!-- start table -->
+      <div class="box-white m-0">
+        <div class="d-flex justify-content-between align-items-center flex-wrap border-b-1 p-3 mb-3 mb-md-5">
+          <h4 class="pt-4 mb-0 px-2">Manage Currency</h4>
+          <div class="d-flex align-items-center flex-wrap">
+            <a href="#" class="btn btn-details font-16 mt-2">Currency Rate API</a>
+            <a href="#" class="btn btn-details font-16 mt-2">Add New</a>
+            <div class="input-group mt-2">
+              <input type="text" class="form-control font-16" placeholder="Currency Name / Code" aria-label="Currency"
+                aria-describedby="basic-addon1">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="cards-cuurency d-flex flex-wrap">
+          <div class="card-curr">
+            <div class="mb-0 mb-md-2 d-flex position-relative">
+              <p class="title">United State Dollar</p>
+              <div class="img-icon">
+                <img src="../assets/dollar.svg" alt="dolar">
+              </div>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Symbol :</p>
+              <p class="col-4 col-md-5 gray-text">$</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Code :</p>
+              <p class="col-4 col-md-5 gray-text">USD</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Type :</p>
+              <p class="col-4 col-md-5 gray-text">Fiat</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Rate 1 USD :</p>
+              <p class="col-4 col-md-5 gray-text">1000 USD</p>
+            </div>
+            <button class="btn btn-confirm d-block m-auto">Edit Currency</button>
+          </div>
+          <div class="card-curr">
+            <div class="mb-0 mb-md-2 d-flex position-relative">
+              <p class="title">United State Dollar</p>
+              <div class="img-icon">
+                <img src="../assets/dollar.svg" alt="dolar">
+              </div>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Symbol :</p>
+              <p class="col-4 col-md-5 gray-text">$</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Code :</p>
+              <p class="col-4 col-md-5 gray-text">USD</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Type :</p>
+              <p class="col-4 col-md-5 gray-text">Fiat</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Rate 1 USD :</p>
+              <p class="col-4 col-md-5 gray-text">1000 USD</p>
+            </div>
+            <button class="btn btn-confirm d-block m-auto">Edit Currency</button>
+          </div>
+          <div class="card-curr">
+            <div class="mb-0 mb-md-2 d-flex position-relative">
+              <p class="title">United State Dollar</p>
+              <div class="img-icon">
+                <img src="../assets/dollar.svg" alt="dolar">
+              </div>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Symbol :</p>
+              <p class="col-4 col-md-5 gray-text">$</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Code :</p>
+              <p class="col-4 col-md-5 gray-text">USD</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Type :</p>
+              <p class="col-4 col-md-5 gray-text">Fiat</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Rate 1 USD :</p>
+              <p class="col-4 col-md-5 gray-text">1000 USD</p>
+            </div>
+            <button class="btn btn-confirm d-block m-auto">Edit Currency</button>
+          </div>
+          <div class="card-curr">
+            <div class="mb-0 mb-md-2 d-flex position-relative">
+              <p class="title">United State Dollar</p>
+              <div class="img-icon">
+                <img src="../assets/dollar.svg" alt="dolar">
+              </div>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Symbol :</p>
+              <p class="col-4 col-md-5 gray-text">$</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Code :</p>
+              <p class="col-4 col-md-5 gray-text">USD</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Type :</p>
+              <p class="col-4 col-md-5 gray-text">Fiat</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Rate 1 USD :</p>
+              <p class="col-4 col-md-5 gray-text">1000 USD</p>
+            </div>
+            <button class="btn btn-confirm d-block m-auto">Edit Currency</button>
+          </div>
+          <div class="card-curr">
+            <div class="mb-0 mb-md-2 d-flex position-relative">
+              <p class="title">United State Dollar</p>
+              <div class="img-icon">
+                <img src="../assets/dollar.svg" alt="dolar">
+              </div>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Symbol :</p>
+              <p class="col-4 col-md-5 gray-text">$</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Code :</p>
+              <p class="col-4 col-md-5 gray-text">USD</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Type :</p>
+              <p class="col-4 col-md-5 gray-text">Fiat</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Rate 1 USD :</p>
+              <p class="col-4 col-md-5 gray-text">1000 USD</p>
+            </div>
+            <button class="btn btn-confirm d-block m-auto">Edit Currency</button>
+          </div>
+          <div class="card-curr">
+            <div class="mb-0 mb-md-2 d-flex position-relative">
+              <p class="title">United State Dollar</p>
+              <div class="img-icon">
+                <img src="../assets/bitcoin.svg" alt="dolar">
+              </div>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Symbol :</p>
+              <p class="col-4 col-md-5 gray-text">$</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Code :</p>
+              <p class="col-4 col-md-5 gray-text">USD</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Type :</p>
+              <p class="col-4 col-md-5 gray-text">Fiat</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Rate 1 USD :</p>
+              <p class="col-4 col-md-5 gray-text">1000 USD</p>
+            </div>
+            <button class="btn btn-confirm d-block m-auto">Edit Currency</button>
+          </div>
+          <div class="card-curr">
+            <div class="mb-0 mb-md-2 d-flex position-relative">
+              <p class="title">United State Dollar</p>
+              <div class="img-icon">
+                <img src="../assets/dollar.svg" alt="dolar">
+              </div>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Symbol :</p>
+              <p class="col-4 col-md-5 gray-text">$</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Code :</p>
+              <p class="col-4 col-md-5 gray-text">USD</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Type :</p>
+              <p class="col-4 col-md-5 gray-text">Fiat</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Rate 1 USD :</p>
+              <p class="col-4 col-md-5 gray-text">1000 USD</p>
+            </div>
+            <button class="btn btn-confirm d-block m-auto">Edit Currency</button>
+          </div>
+          <div class="card-curr">
+            <div class="mb-0 mb-md-2 d-flex position-relative">
+              <p class="title">United State Dollar</p>
+              <div class="img-icon">
+                <img src="../assets/bitcoin.svg" alt="dolar">
+              </div>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Symbol :</p>
+              <p class="col-4 col-md-5 gray-text">$</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Code :</p>
+              <p class="col-4 col-md-5 gray-text">USD</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Type :</p>
+              <p class="col-4 col-md-5 gray-text">Fiat</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Rate 1 USD :</p>
+              <p class="col-4 col-md-5 gray-text">1000 USD</p>
+            </div>
+            <button class="btn btn-confirm d-block m-auto">Edit Currency</button>
+          </div>
+          <div class="card-curr">
+            <div class="mb-0 mb-md-2 d-flex position-relative">
+              <p class="title">United State Dollar</p>
+              <div class="img-icon">
+                <img src="../assets/dollar.svg" alt="dolar">
+              </div>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Symbol :</p>
+              <p class="col-4 col-md-5 gray-text">$</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Code :</p>
+              <p class="col-4 col-md-5 gray-text">USD</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Currency Type :</p>
+              <p class="col-4 col-md-5 gray-text">Fiat</p>
+            </div>
+            <div class="mb-0 mb-md-2 d-flex justify-content-between">
+              <p class="col-8 col-md-7">Rate 1 USD :</p>
+              <p class="col-4 col-md-5 gray-text">1000 USD</p>
+            </div>
+            <button class="btn btn-confirm d-block m-auto">Edit Currency</button>
+          </div>
+        </div>
+      </div>
+      <!-- end table -->
+    </div>
+  </main>
+
+
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src='../js/jQuery.js'></script>
+
+
+  <!-- table -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src='https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js'></script>
+  <script src='https://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js'></script>
+  <script src='https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js'>
+  </script>
+  <!-- end -->
+
+  <script src='../js/custom_jQuery.js'></script>
+  <script src='../js/script.js'></script>
+
+</body>
+
+</html>

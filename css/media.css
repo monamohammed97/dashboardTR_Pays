@@ -1,0 +1,191 @@
+@media (max-width: 1399.98px) {
+  .currency .cards-cuurency {
+    padding: 1rem 2rem;
+  }
+
+  .currency .card-curr {
+    width: calc(95%/3);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .cards .s-card {
+    width: calc(90%/3);
+  }
+
+  .profile_img {
+    margin-top: 3rem;
+  }
+
+  .menu-icon {
+    width: 30px;
+  }
+
+  .logo {
+    width: 35px;
+  }
+
+  .modal-box {
+    min-height: 250px;
+  }
+
+  .modal-box .btn-start {
+    height: 45px;
+    min-width: 190px;
+  }
+
+  .cards .box-card-img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .cards .box-card-img img {
+    width: 55%;
+    height: 55%;
+  }
+
+  .home-page .modal-body {
+    width: 70% !important;
+  }
+
+  .cards .s-card {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .cards .s-card {
+    width: calc(90%/2);
+  }
+
+  .modal-box .btn-start {
+    min-width: 170px;
+  }
+
+  .home-page .modal-header {
+    padding-bottom: 0;
+  }
+
+  .home-page .modal-content {
+    min-height: 400px;
+  }
+
+  .currency .card-curr {
+    width: calc(90%/2);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container-img-modal {
+    width: 200px;
+  }
+
+  .modal-box .btn-start {
+    height: 40px;
+    min-width: 160px;
+  }
+
+  .cards .s-card {
+    min-height: 250px;
+  }
+
+  .dis-none {
+    display: none;
+  }
+
+  .modal.show .modal-dialog {
+    max-width: 90%;
+    width: 90%;
+    margin: auto;
+  }
+
+  .home-page .modal-body {
+    width: 85% !important;
+  }
+
+  .currency .card-curr {
+    width: 90%;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modal-box .btn-start {
+    min-width: 85%;
+  }
+
+  .cards .box-card-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .cards .s-card {
+    min-height: 200px;
+  }
+
+  aside.sidebar-menu-expanded {
+    width: 290px;
+  }
+
+  aside.sidebar #justify-icon {
+    box-shadow: rgb(0 0 0 / 16%) -211px 3px 6px;
+  }
+
+  .menu-icon {
+    width: 25px;
+  }
+
+  .logo {
+    width: 30px;
+  }
+
+  .logo img {
+    object-fit: contain;
+  }
+
+  table.dataTable.dtr-inline.collapsed tbody td:first-child:before,
+  table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+  }
+
+  .home-page .modal-content {
+    min-height: 300px;
+  }
+
+  .currency .card-curr {
+    width: 100%;
+  }
+
+  .currency .cards-cuurency {
+    padding: 0rem 1rem 2rem;
+  }
+
+  .currency .input-group {
+    width: fit-content;
+  }
+
+  .btn-confirm {
+    border-radius: 0;
+    padding: 5px 1rem;
+  }
+}
+
+@media (max-width: 419.98px) {
+  .cards .s-card {
+    width: 100%;
+  }
+
+  .currency .card-curr .img-icon {
+    width: 45px;
+    height: 45px;
+    right: -9px;
+    top: -9px;
+  }
+
+  .country .flag-icon {
+    width: 30px;
+    height: 20px;
+  }
+}
